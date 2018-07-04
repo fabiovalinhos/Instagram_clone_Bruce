@@ -27,7 +27,7 @@
 
   <div class="field">
     <%= form.label :photo %>
-    <%= form.file_field :photo, accept: 'image/*' %>
+    <%= form.file_field :photo, direct_upload: true, accept: 'image/*' %>
   </div>
 
   <div class="actions">

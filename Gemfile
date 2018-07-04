@@ -25,6 +25,7 @@ gem 'devise-i18n'
 gem 'image_processing'
 gem 'will_paginate'
 
+gem 'aws-sdk-s3'
 
 
 # Use CoffeeScript for .coffee assets and views
