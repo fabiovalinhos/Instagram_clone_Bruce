@@ -27,6 +27,8 @@ gem 'will_paginate'
 
 gem 'aws-sdk-s3'
 
+gem 'sendgrid-ruby'
+
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
