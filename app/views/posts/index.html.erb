@@ -12,8 +12,10 @@
       <%= link_to post do %>
         <h2><%= post.title %></h2>
       <% end %>
-      <%= link_to 'Editar', edit_post_path(post) %>
-      <%= link_to 'Apagar postagem', post, method: :delete, data: { confirm: 'Você confirma apagar?' } %>
+      <% if post.user == current_user %>
+        <%= link_to 'Editar', edit_post_path(post) %>
+        <%= link_to 'Apagar postagem', post, method: :delete, data: { confirm: 'Você confirma apagar?' } %>
+      <% end %>
     </div>
 
     <div class="col-md-5">

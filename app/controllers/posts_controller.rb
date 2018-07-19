@@ -5,6 +5,8 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.paginate(:page => params[:page], :per_page => 6)
+    # option for user just see your posts
+    # @posts = current_user.posts.paginate(:page => params[:page], :per_page => 6)
   end
 
   # GET /posts/1
@@ -19,6 +21,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    @post = current_user.posts.find(params[:id])
   end
 
   # POST /posts
